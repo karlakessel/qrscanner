@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Historial
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let registro of registros" (click)="abrirRegistro(registro)">
+      <ion-icon slot="start" name="{{registro.icon}}">
+      </ion-icon>
+      <ion-label>
+        <h2>{{registro.text}}</h2>
+        <p>{{registro.created}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
